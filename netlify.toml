@@ -1,6 +1,9 @@
+[build.environment]
+  NPM_FLAGS = "--version"
+
 [build]
-  base = "site/"
-  command = "pnpm build"
+  base= "site/"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run build"
   publish = ".next"
 
 [[plugins]]
