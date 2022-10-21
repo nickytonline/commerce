@@ -1,2 +1,12 @@
+# [build]
+#   base = "site/"
+
+[build.environment]
+  NETLIFY_USE_PNPM = "true"
+
 [build]
-  base = "site/"
+  command = "pnpm build"
+  publish = "site/.next"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
