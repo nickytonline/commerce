@@ -1,0 +1,9 @@
+[build.environment]
+  NETLIFY_USE_PNPM = "true"
+
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
